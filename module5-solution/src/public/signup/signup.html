@@ -43,16 +43,15 @@
         <div class="form-group" ng-class="{'has-error': signupForm.phone.$invalid && signupForm.phone.$touched}">
             <label for="phone">Phone Number:</label>
             <input type="text" class="form-control" id="phone" placeholder="Phone ###-###-####"
-            pattern="(\d{3})-(\d{3})-(\d{4})"> name="phone" ng-model="user.phone" required>
+            pattern="(\d{3})-(\d{3})-(\d{4})" name="phone" ng-model="user.phone" required>
             <span ng-show="signupForm.phone.$invalid && signupForm.phone.$touched"
                 class="help-block">
                 Phone must be in the format ###-###-####.
             </span>
         </div>
-        <div class="form-group" ng-class="{has-error: signupForm.menuShortNameFav.$invalid && signupForm.menuShortNameFav.$touched}">
-            <label for="menuShortNameFav" class="form-control" id="menuShortNameFav" name="menuShortNameFav"
-                ng-model="user.menuShortNameFav">
-            
+        <div class="form-group" ng-class="{'has-error': signupForm.menuShortNameFav.$invalid && signupForm.menuShortNameFav.$touched}">
+            <label for="menuShortNameFav">
+                Menu Short Name Fav:
             </label>
             <input type="text" class="form-control" id="menuShortNameFav" name="menuShortNameFav"
                 ng-model="user.menuShortNameFav" required>
