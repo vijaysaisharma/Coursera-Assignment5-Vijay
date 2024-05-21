@@ -1,3 +1,4 @@
+<h2>Signup Form</h2>
 <style>
     .input {
         background-color: aliceblue;
@@ -9,7 +10,6 @@
 </style>
 
 <div class="container">
-    <h2>Signup Form</h2>
     <form name="signupForm" ng-submit="submitForm(signupForm.$valid)" novalidate>
         <div class="form-group" ng-class="{'has-error': signupForm.firstName.$invalid && signupForm.firstName.$touched}">
             <label for="firstName">First Name:</label>
