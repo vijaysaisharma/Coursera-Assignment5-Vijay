@@ -14,6 +14,7 @@ function MenuService($http, ApiPath) {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
       return response.data;
     });
+  };
 
     service.saveSignupPref = function(newPreferences){
       preferences = newPreferences;
@@ -24,17 +25,12 @@ function MenuService($http, ApiPath) {
       console.log('get preferences: ', preferences);
       return preferences;
     };
-  };
-
 
   service.getMenuItems = function (category) {
     return $http.get(ApiPath + '/menu_items/' + category + '.json').then(function (response) {
       return response.data;
     });
   };
-
 }
-
-
 
 })();

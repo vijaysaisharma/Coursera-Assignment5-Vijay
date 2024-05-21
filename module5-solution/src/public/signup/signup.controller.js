@@ -2,7 +2,6 @@
     'use strict';
 
     angular.module('public')
-        .constant('APIBasePath', 'https://coursera-jhu-default-rtdb.firebaseio.com/')
         .controller('SignupController', ['$scope', '$http', 'MenuService',
         function($scope, $http, MenuService)
     {
@@ -23,8 +22,8 @@
                     throw new Error("The input string does not match the expected format.");
                 };
                 $scope.errorMessage = 'Valid Message: ' + short_name + " # " + menu_num;
-                var url = APIBasePath + "/menu_items/" + short_name + "/" + input + ".jpg";
-                $scope.fav_img_url = "https://" + window.location.host + "/images/menu/" + short_name + input + ".jpg";
+                var url = "https://coursera-jhu-default-rtdb.firebaseio.com" + "/menu_items/" + short_name + "/menu_items/" + menu_num + ".json";
+                $scope.fav_img_url = "http://" + window.location.host + "/images/menu/" + short_name + "/" + input + ".jpg";
                 $scope.menu_num = menu_num;
                 $http.get(url)
                     .then(function(response){
