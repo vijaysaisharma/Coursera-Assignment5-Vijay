@@ -23,7 +23,7 @@
                 };
                 $scope.errorMessage = 'Valid Message: ' + short_name + " # " + menu_num;
                 var url = "https://coursera-jhu-default-rtdb.firebaseio.com" + "/menu_items/" + short_name + "/menu_items/" + menu_num + ".json";
-                $scope.fav_img_url = "https://" + window.location.host + "/images/menu/" + short_name + "/" + input + ".jpg";
+                $scope.fav_img_url = "http://" + window.location.host + "/Coursera-Assignment5-Vijay/module5-solution" + "/images/menu/" + short_name + "/" + input + ".jpg";
                 console.log('$scope.fav_img_url: ', $scope.fav_img_url);
                 $scope.menu_num = menu_num;
                 $http.get(url)
