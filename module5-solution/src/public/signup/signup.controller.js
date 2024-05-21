@@ -2,12 +2,10 @@
     'use strict';
 
     angular.module('public')
-        .controller('SignupController', SignupController)
-        .constant('APIBasePath', 'https://coursera-jhu-default-rtdb.firebaseio.com/');
-    
-        SignupController.$inject = ['$scope', '$http', 'MenuService'];
-
-    function SignupController($scope, $http, MenuService){
+        .constant('APIBasePath', 'https://coursera-jhu-default-rtdb.firebaseio.com/')
+        .controller('SignupController', ['$scope', '$http', 'MenuService',
+        function($scope, $http, MenuService)
+    {
         $scope.user = {};
         $scope.errorMessage = '';
         $scope.submitForm = function(isValid){
@@ -56,5 +54,5 @@
                 $scope.errorMessage = 'Please fill the form correctly.';
             };
         };
-    }
+    }]);
 })()
